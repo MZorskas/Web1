@@ -72,7 +72,7 @@ body {
 
 .sidenav {
   position: fixed;
-  overflow: hidden;
+  overflow: auto;
   left: 0;
   top: 70px;
   width: 240px;
@@ -122,7 +122,7 @@ body {
   padding-bottom: 4rem; }
   .main__flexcontainer1 {
     display: flex;
-    background-color: green;
+    background-color: lightgrey;
     height: 110px;
     padding-left: 8px;
     padding-right: 8px; }
@@ -152,11 +152,10 @@ body {
           margin-bottom: 5px; }
   .main__flexcontainer2 {
     display: flex;
-    background-color: green;
     height: 300px;
     padding-left: 8px;
     padding-right: 8px;
-    background-color: #be0cb6; }
+    background-color: lightgrey; }
     .main__flexcontainer2 > div {
       width: 33%;
       max-width: 33%;
@@ -172,7 +171,7 @@ body {
     height: 350px;
     padding-left: 8px;
     padding-right: 8px;
-    background-color: orange; }
+    background-color: lightgrey; }
     .main__flexcontainer3__left {
       position: relative;
       background: white;
@@ -180,10 +179,10 @@ body {
       max-width: 67%;
       margin: 8px; }
       .main__flexcontainer3__left p {
-        margin: 0px;
         font-size: 14px;
         margin-left: 10px;
-        margin-top: 5px; }
+        margin-top: 5px;
+        margin-bottom: 5px; }
       .main__flexcontainer3__left h4 {
         font-size: 15px;
         text-transform: uppercase;
@@ -201,7 +200,7 @@ body {
         .main__flexcontainer3__left table td {
           font-size: 14px; }
     .main__flexcontainer3__right {
-      background: blue;
+      background: lightgrey;
       display: flex;
       flex-direction: column;
       width: 33%;
@@ -215,10 +214,12 @@ body {
         margin-top: 0px;
         margin-bottom: 16px;
         align-items: center; }
-        .main__flexcontainer3__right .box2 .imgbox2 .img-circle {
-          height: 75.5px;
-          width: 75.5px;
-          border-radius: 50%; }
+        .main__flexcontainer3__right .box2 .imgbox2 {
+          height: 75.5px; }
+          .main__flexcontainer3__right .box2 .imgbox2 .img-circle {
+            height: 75.5px;
+            width: 75.5px;
+            border-radius: 50%; }
         .main__flexcontainer3__right .box2 .contentbox {
           margin-left: 20px; }
           .main__flexcontainer3__right .box2 .contentbox h4 {
@@ -239,8 +240,13 @@ body {
   .main footer {
     position: absolute;
     background-color: white;
-    margin-left: 0px;
+    left: 0;
     bottom: 0;
     width: 100%;
-    height: 2.5rem; }
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 15px; }
+    .main footer h5 {
+      padding-left: 20px;
+      margin: auto; }
 

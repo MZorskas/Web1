@@ -1,4 +1,4 @@
-import './assets/styles/app.scss';
+import './assets/styles/app.scss'
 import './assets/images/all_inclusive-24px.svg'
 import './assets/images/crop_free-24px.svg'
 import './assets/images/emoji_objects-24px.svg'
@@ -21,3 +21,4 @@ import './assets/images/arrow_drop_down_circle-24px.svg'
 import './assets/images/radio_button_unchecked-24px.svg'
 import './assets/images/portrait2.jpg'
 import './assets/images/portrait3.jpg'
+import './index.hbs'
