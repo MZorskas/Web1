@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  background: lightgrey; }
+  background: lightgrey;
+  font-family: sans-serif; }
 
 .nav {
   position: fixed;
@@ -111,27 +112,44 @@ body {
     margin-bottom: 15px; }
 
 .main {
+  position: relative;
   background-color: lightgrey;
   margin-top: 70px;
   margin-left: 240px;
   max-width: 100%;
-  height: 100%; }
+  height: 100%;
+  min-height: 100%;
+  padding-bottom: 4rem; }
   .main__flexcontainer1 {
     display: flex;
     background-color: green;
     height: 110px;
     padding-left: 8px;
     padding-right: 8px; }
-    .main__flexcontainer1 > div {
+    .main__flexcontainer1 .box {
       display: flex;
       flex-grow: 1;
       flex-basis: 0;
       background-color: white;
       margin: 8px;
-      margin-top: 0px; }
-      .main__flexcontainer1 > div img {
-        height: 90px;
-        width: 90px; }
+      margin-top: 0px;
+      display: flex;
+      align-items: center; }
+      .main__flexcontainer1 .box .imgbox img {
+        height: 85px;
+        width: 85px;
+        border-radius: 50%; }
+      .main__flexcontainer1 .box .contentbox {
+        text-align: right;
+        flex: 100%;
+        padding-right: 10px; }
+        .main__flexcontainer1 .box .contentbox h4 {
+          font-size: 18px;
+          margin: 0px; }
+        .main__flexcontainer1 .box .contentbox p {
+          font-size: 12px;
+          margin-top: 5px;
+          margin-bottom: 5px; }
   .main__flexcontainer2 {
     display: flex;
     background-color: green;
@@ -140,9 +158,8 @@ body {
     padding-right: 8px;
     background-color: #be0cb6; }
     .main__flexcontainer2 > div {
+      width: 33%;
       max-width: 33%;
-      flex-grow: 1;
-      flex-basis: 0;
       background-color: white;
       margin: 8px; }
     .main__flexcontainer2 h4 {
@@ -152,15 +169,78 @@ body {
       margin-left: 10px; }
   .main__flexcontainer3 {
     display: flex;
-    background-color: green;
-    height: 300px;
-    max-width: 66%;
+    height: 350px;
     padding-left: 8px;
     padding-right: 8px;
     background-color: orange; }
+    .main__flexcontainer3__left {
+      position: relative;
+      background: white;
+      width: 67%;
+      max-width: 67%;
+      margin: 8px; }
+      .main__flexcontainer3__left p {
+        margin: 0px;
+        font-size: 14px;
+        margin-left: 10px;
+        margin-top: 5px; }
+      .main__flexcontainer3__left h4 {
+        font-size: 15px;
+        text-transform: uppercase;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-bottom: 0px; }
+      .main__flexcontainer3__left table {
+        padding-left: 20px;
+        width: 100%;
+        max-height: 100%;
+        height: 270px;
+        text-align: left; }
+        .main__flexcontainer3__left table th {
+          font-size: 16px; }
+        .main__flexcontainer3__left table td {
+          font-size: 14px; }
+    .main__flexcontainer3__right {
+      background: blue;
+      display: flex;
+      flex-direction: column;
+      width: 33%;
+      max-width: 33%;
+      margin: 8px; }
+      .main__flexcontainer3__right .box2 {
+        display: flex;
+        flex-grow: 1;
+        background-color: white;
+        padding-left: 8px;
+        margin-top: 0px;
+        margin-bottom: 16px;
+        align-items: center; }
+        .main__flexcontainer3__right .box2 .imgbox2 .img-circle {
+          height: 75.5px;
+          width: 75.5px;
+          border-radius: 50%; }
+        .main__flexcontainer3__right .box2 .contentbox {
+          margin-left: 20px; }
+          .main__flexcontainer3__right .box2 .contentbox h4 {
+            margin: 0px; }
+          .main__flexcontainer3__right .box2 .contentbox p {
+            margin-top: 5px;
+            margin-bottom: 5px; }
+          .main__flexcontainer3__right .box2 .contentbox h3 {
+            font-size: 16px;
+            margin: 0px;
+            padding: 0px;
+            color: red; }
   .main h3 {
     font-size: 20px;
     padding-top: 10px;
     margin-bottom: 29.5px;
     padding-left: 15px; }
+  .main footer {
+    position: absolute;
+    background-color: white;
+    margin-left: 0px;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; }
 
