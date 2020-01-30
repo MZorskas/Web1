@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="assets/styles/app.css">
 <link href="assets/styles/app.css" rel="stylesheet"></head>
 <body>
-    <nav class="nav">
+    <nav data-sidenav class="nav sidenav-hide">
             <div class="nav__left">
-                <a href="#">
+                <a href="home.html">
                     <img src="assets/images/offline_bolt-24px.svg" alt="Menu">
                     <span>MINTON</span>
                 </a>
             </div>
             <div class="nav__right">
                 <div class="nav__right__menu">
-                    <img src="assets/images/menu-24px.svg" alt="Meniu">
+                    <img data-toggle="sidenav" src="assets/images/menu-24px.svg" alt="Meniu">
                     <div class="search-input">
                         <input type="text" />
                         <a href="#">
@@ -39,14 +39,14 @@
                     </ul>
                 </div>
             </div>
-        </nav>    <nav class="sidenav">
+        </nav>    <nav data-sidenav class="sidenav sidenav-hide">
+        <div class="sidenav-divider">
             <h5>Main</h5>
-            <ul>
+            <ul class="sidenav__list">
                 <li>
                     <a href="#">
                         <img src="assets/images/home-24px.svg" alt="Dashboard">
                         <span>Dashboard</span>
-                        <img src="assets/images/navigate_next-24px.svg" alt="Dashboard">
                     </a>
                 </li>
                 <li>
@@ -81,7 +81,7 @@
                 </li>
             </ul>
                 <h5>More</h5>
-             <ul>
+             <ul class="sidenav__list">
                 <li>
                     <a href="#">
                         <img src="assets/images/format_list_bulleted-24px.svg" alt="Dashboard">
@@ -108,7 +108,7 @@
                 </li>
             </ul>
                  <h5>Extras</h5>
-             <ul>
+             <ul class="sidenav__list">
                 <li>
                     <a href="#">
                         <img src="assets/images/home-24px.svg" alt="Dashboard">
@@ -128,8 +128,9 @@
                     </a>
                 </li>
             </ul>
+        </div>
     </nav>    
-    <main class="main">
+    <main data-sidenav class="main sidenav-hide">
         <h3>Welcome!</h3>
         <div class="main__flexcontainer1">
             <div class="box">
@@ -241,7 +242,7 @@
                     <div class="contentbox">
                         <h4>Username</h4>
                         <p>Email@gmail.com</p>
-                        <span>Admin</span>
+                        <b class="color-guest">Admin</b>
                     </div>
                 </div>
                 <div class="box2">
@@ -251,7 +252,7 @@
                     <div class="contentbox">
                         <h4>Username</h4>
                         <p>Email@gmail.com</p>
-                        <span>User</span>
+                        <b class="color-admin">Admin</b>
                     </div>
                 </div>
                 <div class="box2">
@@ -261,7 +262,7 @@
                     <div class="contentbox">
                         <h4>Username</h4>
                         <p>Email@gmail.com</p>
-                        <h3>Admin</h3>
+                        <b class="color-user">User</b>
                     </div>
                 </div>
             </div>

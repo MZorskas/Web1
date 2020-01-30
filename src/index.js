@@ -22,3 +22,10 @@ import './assets/images/radio_button_unchecked-24px.svg'
 import './assets/images/portrait2.jpg'
 import './assets/images/portrait3.jpg'
 import './index.hbs'
+
+document.querySelector('[data-toggle]').addEventListener('click', function (event) {
+    let element = event.target.dataset.toggle;
+    document.querySelectorAll('[data-' + element + ']').forEach(function (el) {
+        el.classList.toggle(element + '-hide');
+    })
+});

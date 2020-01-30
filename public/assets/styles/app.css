@@ -1,8 +1,3 @@
-body {
-  margin: 0;
-  background: lightgrey;
-  font-family: sans-serif; }
-
 .nav {
   position: fixed;
   z-index: 999;
@@ -78,51 +73,53 @@ body {
   width: 240px;
   height: 100%;
   background: #fff; }
-  .sidenav a {
-    display: block;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: #000;
-    border: 0px solid black; }
-  .sidenav ul {
-    list-style-type: none;
-    padding: 0;
-    background-color: white; }
-    .sidenav ul li a {
-      vertical-align: middle;
-      justify-content: center;
-      color: #000;
-      padding: 8px 16px;
-      text-decoration: none; }
-      .sidenav ul li a:hover {
-        color: black;
-        background-color: #f0f0f0;
-        border-left: 3px solid blue;
-        margin-bottom: -3px; }
-      .sidenav ul li a img {
-        vertical-align: middle; }
-      .sidenav ul li a span {
-        vertical-align: middle; }
-  .sidenav img {
-    margin-right: 10px; }
+  .sidenav__list {
+    padding: 0; }
+    .sidenav__list li {
+      display: block; }
+      .sidenav__list li a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 12px 20px;
+        text-decoration: none; }
+        .sidenav__list li a:hover {
+          color: black;
+          background-color: #e6e6e6;
+          border-left: 3px solid blue;
+          margin-bottom: -3px; }
+        .sidenav__list li a img {
+          margin-right: 10px; }
+        .sidenav__list li a span {
+          display: block; }
   .sidenav h5 {
-    padding: 0px 8px;
-    margin-top: 30px;
-    margin-bottom: 15px; }
+    padding: 12px 20px; }
+  .sidenav.sidenav-hide {
+    width: 70px; }
+    .sidenav.sidenav-hide .sidenav__list a span {
+      display: none; }
+
+.sidenav-divider {
+  padding-bottom: 120px; }
+
+body {
+  margin: 0;
+  background: lightgray;
+  font-family: sans-serif; }
 
 .main {
-  position: relative;
-  background-color: lightgrey;
+  position: absolute;
+  background-color: lightgray;
   margin-top: 70px;
   margin-left: 240px;
   max-width: 100%;
   height: 100%;
+  bottom: 0;
   min-height: 100%;
   padding-bottom: 4rem; }
   .main__flexcontainer1 {
     display: flex;
-    background-color: lightgrey;
+    background-color: lightgray;
     height: 110px;
     padding-left: 8px;
     padding-right: 8px; }
@@ -155,7 +152,7 @@ body {
     height: 300px;
     padding-left: 8px;
     padding-right: 8px;
-    background-color: lightgrey; }
+    background-color: lightgray; }
     .main__flexcontainer2 > div {
       width: 33%;
       max-width: 33%;
@@ -171,7 +168,7 @@ body {
     height: 350px;
     padding-left: 8px;
     padding-right: 8px;
-    background-color: lightgrey; }
+    background-color: lightgray; }
     .main__flexcontainer3__left {
       position: relative;
       background: white;
@@ -200,7 +197,7 @@ body {
         .main__flexcontainer3__left table td {
           font-size: 14px; }
     .main__flexcontainer3__right {
-      background: lightgrey;
+      background: lightgray;
       display: flex;
       flex-direction: column;
       width: 33%;
@@ -230,8 +227,13 @@ body {
           .main__flexcontainer3__right .box2 .contentbox h3 {
             font-size: 16px;
             margin: 0px;
-            padding: 0px;
-            color: red; }
+            padding: 0px; }
+          .main__flexcontainer3__right .box2 .contentbox .color-admin {
+            color: rgba(238, 110, 115, 0.75); }
+          .main__flexcontainer3__right .box2 .contentbox .color-user {
+            color: rgba(102, 187, 106, 0.75); }
+          .main__flexcontainer3__right .box2 .contentbox .color-guest {
+            color: rgba(156, 39, 176, 0.75); }
   .main h3 {
     font-size: 20px;
     padding-top: 10px;
@@ -249,8 +251,13 @@ body {
     .main footer h5 {
       padding-left: 20px;
       margin: auto; }
-
-@media (min-width: 600px) {
-  body {
-    background: red; } }
+  .main.sidenav-hide {
+    position: relative;
+    background-color: lightgray;
+    margin-top: 70px;
+    margin-left: 70px;
+    max-width: 100%;
+    height: 100%;
+    min-height: 100%;
+    padding-bottom: 4rem; }
 
